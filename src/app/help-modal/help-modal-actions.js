@@ -1,0 +1,1 @@
+export const CLOSE_HELP_MODAL = "helpMolda/closeWindow";

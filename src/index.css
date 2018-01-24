@@ -12,7 +12,7 @@ input {
   box-sizing: border-box;
   border: none; }
 
-.resize-container:after {
+.resize-container:after, .modal-window .content .bar:after {
   content: "";
   display: table;
   clear: both; }
@@ -23,7 +23,7 @@ ul.undo-list {
   padding: 0px;
   display: block; }
 
-[ng-click] {
+button {
   cursor: pointer; }
 
 body {
@@ -98,6 +98,53 @@ body {
 .traveler-sky {
   animation: travelerSky 700s infinite;
   animation-timing-function: linear; }
+
+.modal-window {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 100vh;
+  text-align: center;
+  -webkit-transition: opacity 150ms ease;
+  -moz-transition: opacity 150ms ease;
+  -o-transition: opacity 150ms ease;
+  transition: opacity 150ms ease; }
+  .modal-window .content {
+    display: inline-block;
+    line-height: 25px;
+    color: #00FF80;
+    padding: 10px;
+    background: black;
+    border: 1px solid rgba(0, 255, 128, 0.3); }
+    .modal-window .content .bar {
+      padding-bottom: 10px; }
+      .modal-window .content .bar .close-modal {
+        float: right;
+        padding: 10px;
+        border: 1px solid rgba(0, 255, 128, 0.3); }
+
+.modal-window:not(.show) {
+  opacity: 0;
+  pointer-events: none; }
+  .modal-window:not(.show) * {
+    pointer-events: none !important; }
+
+#help {
+  z-index: 2; }
+  #help .content {
+    padding: 20px;
+    border: 1px solid; }
+    #help .content .message {
+      text-align: left; }
+    #help .content .skip {
+      margin-top: 10px;
+      padding: 10px 50px; }
 
 @media screen and (max-width: 750px) {
   .no-mobile {
