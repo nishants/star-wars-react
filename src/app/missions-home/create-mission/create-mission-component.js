@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SelectPlanets from './select-planets/select-planets-component';
+import SelectVehicles from './select-vehicles/select-vehicles-component.js';
 import {CREATE_NEW_MISSION, CANCEL_CREATING_MISSION, selectPlanet} from './create-mission-actions'
 
 const MissionsWidget = ({menu, createMission, cancelCreatingMission, selectPlanet})=> {
@@ -19,7 +20,7 @@ const MissionsWidget = ({menu, createMission, cancelCreatingMission, selectPlane
           </div>
           <div className='sub-menu select-vehicle'>
             <label> 2. Select Vehicle</label>
-            <SelectPlanets onSelect={selectPlanet}/>
+            <SelectVehicles onSelect={selectPlanet}/>
           </div>
         </div>
       </div>

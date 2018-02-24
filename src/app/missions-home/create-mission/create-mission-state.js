@@ -16,6 +16,8 @@ export default {
     cancelAndClose: (state)=> {
       return {
         ...state,
+        selectedPlanet: null,
+        showVehicleMenu: false,
         showMenu: false
       };
     },
