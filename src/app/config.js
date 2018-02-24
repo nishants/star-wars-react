@@ -1,5 +1,6 @@
 export const maxMissions = 4;
 export const remote = "https://findfalcone.herokuapp.com";
+
 export const planetIcons = {
   "Donlon": "images/planets/Donlon.png",
   "Enchai": "images/planets/Enchai.ico",
@@ -10,13 +11,11 @@ export const planetIcons = {
   "other": "images/planets/other-planet.png"
 };
 
-export default {
-  requestConfig: {headers: {Accept: "application/json", "Content-Type": "application/json"}},
-  vehicleIcons: {
-    "Space pod": "images/vehicles/space-pod.jpg",
-    "Space rocket": "images/vehicles/space-rocket.png",
-    "Space shuttle": "images/vehicles/shutle.jpeg",
-    "Space ship": "images/vehicles/spaceship.png",
-    "other": "images/vehicles/other-vehicle.jpg"
-  }
+export const vehicleIcons = {
+  "Space pod": "images/vehicles/space-pod.jpg",
+  "Space rocket": "images/vehicles/space-rocket.png",
+  "Space shuttle": "images/vehicles/shutle.jpeg",
+  "Space ship": "images/vehicles/spaceship.png",
+  "other": "images/vehicles/other-vehicle.jpg"
 };
+
