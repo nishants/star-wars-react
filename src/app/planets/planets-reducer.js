@@ -10,7 +10,7 @@ export default (state = Planets.initialState(), action) => {
       return Planets.removeFromMission(action.planetId);
 
     case PLANETS_FETCHED:
-      return Planets.setPlanets(state, action.data) ;
+      return Planets.setPlanets(state, action.planets) ;
 
     default:
       return state;
