@@ -1,0 +1,2 @@
+export const ADD_MISSION = '';
+export const REMOVE_MISSION = 'MISSIONS/REMOVE_MISSION';
