@@ -1,17 +1,19 @@
-import {CLOSE_HELP_MODAL} from './help-modal-actions';
+import {CLOSE_HELP_MODAL, OPEN_HELP_MODAL} from './help-modal-actions';
 
-const helpModalReducer = (state, action)=> {
+const helpModalReducer = (state = {showModal: true}, action)=> {
   switch(action.type){
     case  CLOSE_HELP_MODAL :
       return {
         ...state,
         showModal: false
       };
-    default:
+    case  OPEN_HELP_MODAL :
       return {
         ...state,
         showModal: true
       };
+    default:
+      return state;
   }
 };
 

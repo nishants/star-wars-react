@@ -1,0 +1,12 @@
+$help_size: 55px;
+
+#help-button{
+  cursor: pointer;
+  font-size: 30px;
+  padding: $padding;
+
+  > .fa {
+    color: $white_light;
+    text-align: center;
+  }
+}
