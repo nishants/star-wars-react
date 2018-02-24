@@ -18,5 +18,13 @@ export default {
         ...state,
         showMenu: false
       };
+    },
+
+    selectPlanet: (state, planet)=> {
+      return {
+        ...state,
+        selectedPlanet: planet,
+        showVehicleMenu: true,
+      };
     }
 };

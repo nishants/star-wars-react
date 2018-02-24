@@ -211,6 +211,7 @@ body {
       -o-transition: all 250ms ease;
       transition: all 250ms ease; }
       #missions-widget .menu .sub-menu > ul > li {
+        cursor: pointer;
         position: relative;
         padding: 20px;
         color: #00FF80;

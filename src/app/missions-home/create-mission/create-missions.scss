@@ -67,6 +67,7 @@ $planet_width  : 350px;
       > ul {
         @extend .undo-list;
         > li {
+          cursor: pointer;
           position: relative;
           padding: $padding*2;
           color : $theme_green_text;
