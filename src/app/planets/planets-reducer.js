@@ -1,4 +1,4 @@
-import {ADD_PLANET_TO_MISSION, REMOVE_PLANET_FROM_MISSION} from './planets-actions';
+import {ADD_PLANET_TO_MISSION, REMOVE_PLANET_FROM_MISSION, PLANETS_FETCHED} from './planets-actions';
 import Planets from './planets-state';
 
 export default (state = Planets.initialState(), action) => {
@@ -8,6 +8,9 @@ export default (state = Planets.initialState(), action) => {
 
     case REMOVE_PLANET_FROM_MISSION:
       return Planets.removeFromMission(action.planetId);
+
+    case PLANETS_FETCHED:
+      return Planets.setPlanets(state, action.data) ;
 
     default:
       return state;
