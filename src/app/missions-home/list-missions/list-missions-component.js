@@ -5,9 +5,9 @@ import {REMOVE_MISSION} from '../missions-actions';
 const ListMissions = ({missions, removeMission})=> {
   const toMissionListElement = mission =>  (
       <li key={mission.id}>
-        <div className='planet'> Planet</div>
-        <div className='vehicle'> Vehicle</div>
-        <div className='overview'>Go get it</div>
+        <div className='planet'> {mission.planetName}</div>
+        <div className='vehicle'>  {mission.vehicleName}</div>
+        <div className='overview'>{mission.distanceInMegaMiles} Megagmiles in {mission.missionTime} days</div>
         <div className='cancel' onClick={()=> removeMission(mission)}>
           <div className='no-mobile fa fa-remove'></div>
           <div className='mobile-only'> Delete</div>

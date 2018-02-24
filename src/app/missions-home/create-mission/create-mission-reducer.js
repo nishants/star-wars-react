@@ -12,7 +12,7 @@ export default (state = CreateMission.initialState(), action )=> {
       return CreateMission.cancelAndClose(state);
 
     case SELECT_PLANET:
-      return CreateMission.selectPlanet(state);
+      return CreateMission.selectPlanet(state, action.planet);
 
     case SELECT_VEHICLE:
       return CreateMission.cancelAndClose(state);

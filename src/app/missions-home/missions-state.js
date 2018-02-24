@@ -1,21 +1,17 @@
 export default {
-  initialState: ()=> ([
-    {
-      id: 0,
-      vehicleName: 'Spaceship',
-      planetName: 'Naburu',
-      distanceInMegaMiles: 100,
-      missionTime: 50,
-    }
-  ]),
+  initialState: ()=> ([]),
 
   remove: (state, missionId)=> {
     return state.filter((mission) => mission.id !== missionId);
   },
 
-  addMission: (state, planet, vehicle)=> {
-    return {
-      ...state
-    };
+  add: (state, planet, vehicle)=> {
+    return state.concat({
+      id: state.length,
+      planetName: planet.name,
+      vehicleName: vehicle.name,
+      distanceInMegaMiles: planet.distance,
+      missionTime: planet.distance / vehicle.speed,
+    });
   }
 };
