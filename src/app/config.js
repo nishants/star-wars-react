@@ -1,3 +1,5 @@
+export const maxMissions  = 4;
+
 export default {
   remote       : "https://findfalcone.herokuapp.com",
   requestConfig: {headers: {Accept: "application/json", "Content-Type": "application/json"}},
