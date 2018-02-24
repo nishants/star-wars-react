@@ -7,6 +7,7 @@ import {createStore} from 'redux';
 import rootReducer from './app/reducers';
 
 import './index.css';
+import 'font-awesome/css/font-awesome.css';
 
 ReactDOM.render(
     <Provider store={createStore(rootReducer)}>

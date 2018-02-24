@@ -146,6 +146,18 @@ body {
       margin-top: 10px;
       padding: 10px 50px; }
 
+#missions-home {
+  color: white;
+  text-align: center;
+  margin: auto; }
+
+#help-button {
+  padding: 10px;
+  font-size: 30px; }
+  #help-button > .fa {
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center; }
+
 @media screen and (max-width: 750px) {
   .no-mobile {
     display: none !important; } }
