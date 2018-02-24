@@ -12,12 +12,12 @@ input {
   box-sizing: border-box;
   border: none; }
 
-.resize-container:after, .modal-window .content .bar:after, #missions-widget .menu .sub-menu > ul > li > div:after {
+.resize-container:after, .modal-window .content .bar:after, #missions-widget .menu .sub-menu > ul > li > div:after, #missions-selected > ul.missions > li:after {
   content: "";
   display: table;
   clear: both; }
 
-ul.undo-list, #missions-widget .menu .sub-menu > ul {
+ul.undo-list, #missions-widget .menu .sub-menu > ul, #missions-selected > ul.missions {
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -52,7 +52,7 @@ body {
   #main-content .thumbnail {
     height: 50px;
     width: 50px; }
-  #main-content .title-text, #main-content button, #main-content #missions-widget .menu, #missions-widget #main-content .menu {
+  #main-content .title-text, #main-content button, #main-content #missions-widget .menu, #missions-widget #main-content .menu, #main-content #missions-selected > ul.missions > li {
     font-family: "Aldrich", sans-serif; }
 
 #background {
@@ -293,7 +293,66 @@ body {
 #missions-widget:not(.vehicle) .menu .select-vehicle {
   opacity: 0; }
 
+#missions-selected > ul.missions {
+  padding-top: 10px;
+  background: rgba(0, 0, 0, 0.6); }
+  #missions-selected > ul.missions > li {
+    display: block;
+    margin: auto;
+    line-height: 40px;
+    color: #00FF80;
+    text-transform: capitalize;
+    text-align: left;
+    width: 570px;
+    padding: 0px 10px; }
+    #missions-selected > ul.missions > li .planet, #missions-selected > ul.missions > li .vehicle, #missions-selected > ul.missions > li .overview, #missions-selected > ul.missions > li .cancel {
+      float: left; }
+    #missions-selected > ul.missions > li .planet {
+      width: 100px; }
+    #missions-selected > ul.missions > li .vehicle {
+      width: 150px; }
+    #missions-selected > ul.missions > li .overview {
+      width: 250px; }
+    #missions-selected > ul.missions > li .cancel {
+      width: 50px; }
+
+.appear-from-bottom, #missions-selected > ul.missions > li {
+  animation: fromBottom 150ms;
+  animation-timing-function: ease; }
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
 @media screen and (max-width: 750px) {
+  #missions-selected > ul.missions > li {
+    width: auto;
+    margin: 10px;
+    border: 1px solid rgba(0, 255, 128, 0.3); }
+    #missions-selected > ul.missions > li .planet, #missions-selected > ul.missions > li .vehicle, #missions-selected > ul.missions > li .overview, #missions-selected > ul.missions > li .cancel {
+      width: 100%;
+      text-align: center;
+      float: none;
+      display: block;
+      padding-left: 10px; }
+    #missions-selected > ul.missions > li .cancel .mobile-only {
+      opacity: 0.7;
+      border-top: 1px solid rgba(0, 255, 128, 0.3);
+      padding-right: 10px; }
+
   .no-mobile {
     display: none !important; } }
 @media screen and (min-width: 750px) {
