@@ -1,13 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import MenuItemLoader from '../menu-item-loader-component';
 
 
 const SelectVehicle = ({vehicles, planet, onSelect})=> {
     const
-        loaderElement = (
-            <li className='loader'>
-              <div className='fa fa-circle-o-notch fa-spin'> </div>
-            </li>),
         toVehicleListElement = (vehicle)=> (
             <li className={ (vehicle.left ? '' : 'none-left ') + (vehicle.range < planet.distance ? 'no-range' : '')} onClick={()=>{onSelect(vehicle)}} key={vehicle.name}>
               <div>
@@ -21,10 +18,13 @@ const SelectVehicle = ({vehicles, planet, onSelect})=> {
         );
 
   return(
-      <ul className='vehicles'>
-        {!vehicles.length && loaderElement}
-        {planet && vehicles.map(toVehicleListElement)}
-      </ul>
+      <div className='sub-menu select-vehicle'>
+        <label> 2. Select Vehicle</label>
+        <ul className='vehicles'>
+          {!vehicles.length && <MenuItemLoader/>}
+          {planet && vehicles.map(toVehicleListElement)}
+        </ul>
+      </div>
   );
 };
 

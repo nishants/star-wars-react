@@ -9,6 +9,8 @@
 - deploy on a server
 - test planet removed from mission
 - removing vechicle from a mission
+- rename createMission to missoinswizard
+- no direct name for all actions
 
 # Importovements
 - error handling for all requests

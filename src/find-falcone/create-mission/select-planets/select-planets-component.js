@@ -1,13 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import MenuItemLoader from '../menu-item-loader-component';
 
 
 const SelectPlanets = ({planets, onSelect})=> {
     const
-        loaderElement = (
-            <li className='loader'>
-              <div className='fa fa-circle-o-notch fa-spin'> </div>
-            </li>),
         toPlanetsListElement = (planet)=> (
             <li className={planet.assigned ? 'assigned' : ''} onClick={()=>{onSelect(planet)}} key={planet.name}>
               <div>
@@ -21,10 +18,13 @@ const SelectPlanets = ({planets, onSelect})=> {
         );
 
   return(
-      <ul className='planets'>
-        {!planets.length && loaderElement}
-        {planets.map(toPlanetsListElement)}
-      </ul>
+      <div className='sub-menu select-planet'>
+        <label> 1. Select Planet</label>
+        <ul className='planets'>
+          {!planets.length && <MenuItemLoader/>}
+          {planets.map(toPlanetsListElement)}
+        </ul>
+      </div>
   );
 };
 
