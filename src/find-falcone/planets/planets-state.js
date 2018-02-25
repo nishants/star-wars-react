@@ -7,9 +7,9 @@ export default {
       state.map((planet)=> (planet.name === planetName ? {...planet, assigned: true} : planet))
   ),
 
-  removeFromMission: (state, planetId)=> {
-    return state;
-  },
+  removeFromMission: (state, planetName)=> (
+      state.map((planet)=> (planet.name === planetName ? {...planet, assigned: false} : planet))
+  ),
 
   setPlanets: (state, planets)=> {
     return [].concat(planets).map(planet => ({...planet, assigned: false}));

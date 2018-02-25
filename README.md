@@ -7,6 +7,7 @@
 - document state functions
 - handle server error
 - deploy on a server
+- test planet removed from mission
 
 # Importovements
 - error handling for all requests

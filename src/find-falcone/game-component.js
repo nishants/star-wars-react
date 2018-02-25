@@ -9,11 +9,11 @@ import CreateMissions from './create-mission/create-mission-component';
 import ListMissions   from './list-missions/list-missions-component';
 import GameProgress   from './game-progress/game-progress-component';
 
-import {fetchPlanets, planetsFetched}    from './planets/planets-actions';
+import {loadPlanets}    from './planets/planets-actions';
 import {fetchVehicles, vehiclesFetched}  from './vehicles/vehicles-actions';
 
-const Game = ({fetchPlanets, fetchVehicles})=> {
-  fetchPlanets();
+const Game = ({loadPlanets, fetchVehicles})=> {
+  loadPlanets();
   fetchVehicles();
   return (
       <div id='app'>
@@ -33,10 +33,9 @@ const Game = ({fetchPlanets, fetchVehicles})=> {
 };
 
 const mapDispatchToProps = (dispatch)=> {
-  const onPlanetsFetched = data=> dispatch(planetsFetched(data));
   const onVehiclesFetched = data=> dispatch(vehiclesFetched(data));
   return {
-    fetchPlanets: ()=> dispatch(fetchPlanets).then(onPlanetsFetched),
+    loadPlanets: ()=> loadPlanets(dispatch),
     fetchVehicles: ()=> dispatch(fetchVehicles).then(onVehiclesFetched)
   };
 };
