@@ -4,11 +4,13 @@ import missions  from './missions-home/missions-reducer';
 import planets  from './planets/planets-reducer';
 import vehicles  from './vehicles/vehicles-reducer';
 import createMission  from './missions-home/create-mission/create-mission-reducer';
+import gameResult  from './game-result/game-result-reducer';
 
 export default combineReducers({
   helpModal,
   missions,
   planets,
   vehicles,
-  createMission
+  createMission,
+  gameResult
 });

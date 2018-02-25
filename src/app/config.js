@@ -1,5 +1,6 @@
 export const maxMissions = 4;
 export const remote = "https://findfalcone.herokuapp.com";
+export const remoteHeaders = {Accept: "application/json", "Content-Type": "application/json"};
 
 export const planetIcons = {
   "Donlon": "images/planets/Donlon.png",

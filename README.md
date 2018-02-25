@@ -1,8 +1,11 @@
 # Todo
 - send missions
-- button label update
+- test for help messages
+- set global headers for axios
+- show success/ failed messages
 
 # Importovements
+- error handling for all requests
 - proptypes for all elements
 - travis ci
 - jest code coverage

@@ -1,8 +1,5 @@
-import {maxMissions} from '../../config';
-
 var Help = {
-  message: function (missionsAssigned) {
-    const missionsRemaining = maxMissions - missionsAssigned;
+  message: function (missionsAssigned, missionsRemaining) {
     return Help.states.find(function (state) {
       return state.select(missionsAssigned, missionsRemaining);
     }).message(missionsAssigned, missionsRemaining);
