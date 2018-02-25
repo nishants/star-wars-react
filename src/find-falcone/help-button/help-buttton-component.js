@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {OPEN_HELP_MODAL} from '../help-modal/help-modal-actions';
+import {openModal} from '../help-modal/help-modal-actions';
 
 
 const HelpButton = ({openHelpModal}) => (
@@ -12,7 +12,7 @@ const HelpButton = ({openHelpModal}) => (
 
 
 const mapDispatchToProps = (dispatch)=> ({
-  openHelpModal: ()=> dispatch({type: OPEN_HELP_MODAL})
+  openHelpModal: ()=> openModal(dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(HelpButton);
