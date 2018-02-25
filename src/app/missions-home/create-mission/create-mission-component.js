@@ -6,14 +6,19 @@ import {CREATE_NEW_MISSION, CANCEL_CREATING_MISSION, selectPlanet, selectVehicle
 import {createMission} from '../missions-actions'
 import {assignPlanet} from '../../planets/planets-actions';
 import {assignVehicle} from '../../vehicles/vehicles-actions';
+import Help from './create-mission-help';
 
-const MissionsWidget = ({menu, openMenu, cancelCreatingMission, selectPlanet, sendMission})=> {
-  const widgetState = `${menu.showMenu ? 'create' : ''} ${menu.showVehicleMenu ? 'vehicle' : ''} `;
+const MissionsWidget = ({menu, openMenu, cancelCreatingMission, selectPlanet, sendMission, missionsAssigned})=> {
+  const
+      widgetState = `${menu.showMenu ? 'create' : ''} ${menu.showVehicleMenu ? 'vehicle' : ''} `,
+      message = Help.message(missionsAssigned);
   return (
       <div id='missions-widget' className={widgetState}>
         <div className='backdrop' onClick={cancelCreatingMission}></div>
         <div className='actions'>
-          <button className='create' onClick={openMenu}>Create a mission</button>
+          <button className='create' onClick={openMenu}>
+            {message}
+          </button>
           <button className='cancel' onClick={cancelCreatingMission}>Cancel</button>
         </div>
         <div className='menu'>
@@ -38,7 +43,7 @@ const MissionsWidget = ({menu, openMenu, cancelCreatingMission, selectPlanet, se
   )
 };
 
-const mapStateToProps = ({createMission})=> ({menu: createMission});
+const mapStateToProps = ({createMission, missions})=> ({menu: createMission, missionsAssigned: missions.length});
 
 const mapDispatchToProps = (dispatch)=> ({
   openMenu: ()=> dispatch({type: CREATE_NEW_MISSION}),
