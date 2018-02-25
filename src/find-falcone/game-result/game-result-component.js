@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {GAME_RESTARTED} from './../game-actions';
+import {restartGame} from './../game-actions';
 
 const GameResult = ({gameResult, restart})=> {
   const
-      showResult = gameResult.loading || gameResult.lost|| gameResult.won,
-      show    = showResult ? "show " : "",
-      loading = gameResult.loading  ? "loading " : "",
-      won     = gameResult.won      ? "won "      : "",
-      lost    = gameResult.lost     ? "lost "     : "",
+      showResult  = gameResult.loading || gameResult.lost|| gameResult.won,
+      show        = showResult ? "show " : "",
+      loading     = gameResult.loading  ? "loading " : "",
+      won         = gameResult.won      ? "won "      : "",
+      lost        = gameResult.lost     ? "lost "     : "",
       gameResultState =  show + loading + won + lost;
 
   return (
@@ -35,6 +35,6 @@ const GameResult = ({gameResult, restart})=> {
 
 const mapStateToProps= ({gameResult})=> ({gameResult});
 
-const mapDispatchToProps= (dispatch)=> ({restart: ()=> dispatch({type: GAME_RESTARTED})});
+const mapDispatchToProps= (dispatch)=> ({restart: ()=> restartGame(dispatch)});
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameResult);
