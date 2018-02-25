@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {removeMission} from '../missions-actions';
+import {removeMission} from '../missions-home/missions-actions';
 
 const ListMissions = ({missions, removeMission})=> {
   const toMissionListElement = mission =>  (

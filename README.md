@@ -1,8 +1,10 @@
 # Todo
-- send missions
 - test for help messages
 - set global headers for axios
 - show success/ failed messages
+- add lint
+- set window title
+- document state functions
 
 # Importovements
 - error handling for all requests

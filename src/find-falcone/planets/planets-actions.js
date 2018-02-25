@@ -1,4 +1,4 @@
-import {remote, planetIcons} from '../config';
+import {remote, planetIcons} from '../../config';
 import axios from 'axios';
 
 export const ADDED_PLANET_TO_MISSION = 'PLANETS/ADDED_PLANET_TO_MISSION';

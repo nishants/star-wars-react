@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import deepFreeze from 'deep-freeze';
-import vehiclesReducer from '../../app/vehicles/vehicles-reducer';
-import {vehiclesFetched, assignVehicle} from '../../app/vehicles/vehicles-actions';
+import vehiclesReducer from '../../find-falcone/vehicles/vehicles-reducer';
+import {vehiclesFetched, assignVehicle} from '../../find-falcone/vehicles/vehicles-actions';
 
 describe("Vehicles", ()=>{
   it('should be empty by default', () => {
@@ -10,8 +10,8 @@ describe("Vehicles", ()=>{
   });
 
   it('should set vehicle on fetch', () => {
-    jest.unmock('../../app/config');
-    const config = require('../../app/config');
+    jest.unmock('../../config');
+    const config = require('../../config');
     config.vehicleIcons = {
       "vehicle1": "vehicle1.icon",
       "vehicle2": "vehicle2.icon",
@@ -23,8 +23,8 @@ describe("Vehicles", ()=>{
           {name: "vehicle1", total_no: 1, max_distance: 200, speed: 400},
           {name: "vehicle2", total_no: 2, max_distance: 300, speed: 300}]}),
         expectedState = [
-          {name: "vehicle1", left: 1, img: "vehicle1.icon", range: 200, speed: 400},
-          {name: "vehicle2", left: 2, img: "vehicle2.icon", range: 300, speed: 300}];
+          {name: "vehicle1", left: 1, img: "vehicle1.icon", range: 200, speed: 400, total: 1},
+          {name: "vehicle2", left: 2, img: "vehicle2.icon", range: 300, speed: 300, total: 2}];
 
     expect(vehiclesReducer(initialState, action)).toEqual(expectedState);
   });

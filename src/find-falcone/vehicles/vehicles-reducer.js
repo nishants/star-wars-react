@@ -1,6 +1,6 @@
 import {VEHICLES_FETCHED, ADDED_VEHICLE_TO_MISSION} from './vehicles-actions';
 import Vehicles from './vehicles-state';
-import {GAME_RESTARTED} from '../game-result/game-result-actions';
+import {GAME_RESTARTED} from '../game-actions';
 
 export default (state = Vehicles.initialState(), action) => {
   switch (action.type) {

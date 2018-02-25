@@ -1,6 +1,6 @@
 import {ADDED_PLANET_TO_MISSION, REMOVE_PLANET_FROM_MISSION, PLANETS_FETCHED} from './planets-actions';
 import Planets from './planets-state';
-import {GAME_RESTARTED} from '../game-result/game-result-actions';
+import {GAME_RESTARTED} from '../game-actions';
 
 
 export default (state = Planets.initialState(), action) => {

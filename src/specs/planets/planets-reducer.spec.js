@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import deepFreeze from 'deep-freeze';
-import planetsReducer from '../../app/planets/planets-reducer';
-import {planetsFetched, assignPlanet} from '../../app/planets/planets-actions';
+import planetsReducer from '../../find-falcone/planets/planets-reducer';
+import {planetsFetched, assignPlanet} from '../../find-falcone/planets/planets-actions';
 
 describe("Planets", ()=>{
   it('should be empty by default', () => {

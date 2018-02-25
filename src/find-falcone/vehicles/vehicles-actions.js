@@ -1,4 +1,4 @@
-import {remote, vehicleIcons} from '../config';
+import {remote, vehicleIcons} from '../../config';
 import axios from 'axios';
 
 export const FETCH_VEHICLES   = 'VEHICLES/FETCH_VEHICLES';

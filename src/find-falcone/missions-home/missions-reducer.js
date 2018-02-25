@@ -1,6 +1,6 @@
 import Missions from './missions-state';
 import {REMOVE_MISSION, ADD_MISSION} from './missions-actions';
-import {GAME_RESTARTED} from '../game-result/game-result-actions';
+import {GAME_RESTARTED} from '../game-actions';
 
 export default (state = Missions.initialState(), action)=> {
   switch(action.type){

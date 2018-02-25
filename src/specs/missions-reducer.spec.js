@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import deepFreeze from 'deep-freeze';
-import missionsReducer from '../app/missions-home/missions-reducer';
-import {createMission, removeMission} from '../app/missions-home/missions-actions';
+import missionsReducer from '../find-falcone/missions-home/missions-reducer';
+import {createMission, removeMission} from '../find-falcone/missions-home/missions-actions';
 
 describe("Missions", ()=>{
   it('should be empty by default', () => {

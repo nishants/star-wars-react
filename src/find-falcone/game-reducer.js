@@ -1,5 +1,5 @@
-import {GAME_WON, GAME_LOST, GAME_RESULT_LOADING, GAME_RESTARTED} from './game-result-actions';
-import GameResult from './game-result-state';
+import {GAME_WON, GAME_LOST, GAME_RESULT_LOADING, GAME_RESTARTED} from './game-actions';
+import GameResult from './game-state';
 
 export default (state = GameResult.initialState(), action)=> {
   switch(action.type){

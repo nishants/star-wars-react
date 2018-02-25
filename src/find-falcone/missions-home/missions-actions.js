@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {remote, remoteHeaders} from '../config';
-import {GAME_LOST, GAME_WON, GAME_RESULT_LOADING} from '../game-result/game-result-actions';
+import {remote, remoteHeaders} from '../../config';
+import {GAME_LOST, GAME_WON, GAME_RESULT_LOADING} from '../game-actions';
 
 export const ADD_MISSION = 'MISSIONS/ADD_MISSION';
 export const REMOVE_MISSION = 'MISSIONS/REMOVE_MISSION';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {GAME_RESTARTED} from './game-result-actions';
+import {GAME_RESTARTED} from './../game-actions';
 
 const GameResult = ({gameResult, restart})=> {
   const

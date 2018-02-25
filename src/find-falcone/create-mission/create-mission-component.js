@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import SelectPlanets from './select-planets/select-planets-component';
 import SelectVehicles from './select-vehicles/select-vehicles-component.js';
 import {CREATE_NEW_MISSION, CANCEL_CREATING_MISSION, selectPlanet, selectVehicle} from './create-mission-actions'
-import {createMission, sendMissions} from '../missions-actions'
-import {assignPlanet} from '../../planets/planets-actions';
-import {assignVehicle} from '../../vehicles/vehicles-actions';
+import {createMission, sendMissions} from '../missions-home/missions-actions'
+import {assignPlanet} from '../planets/planets-actions';
+import {assignVehicle} from '../vehicles/vehicles-actions';
 import Help from './create-mission-help';
 import {maxMissions} from '../../config';
 

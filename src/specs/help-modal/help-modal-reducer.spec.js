@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import deepFreeze from 'deep-freeze';
-import helpModalReducer from '../../app/help-modal/help-modal-reducer';
-import {CLOSE_HELP_MODAL} from '../../app/help-modal/help-modal-actions';
+import helpModalReducer from '../../find-falcone/help-modal/help-modal-reducer';
+import {CLOSE_HELP_MODAL} from '../../find-falcone/help-modal/help-modal-actions';
 
 describe("Help Modal", ()=>{
   it('should show modal by default', () => {

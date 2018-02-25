@@ -1,0 +1,10 @@
+#missions-home {
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+@import '../help-button/help-buttton';
+@import '../create-mission/create-missions';
+@import "../list-missions/missions";
+@import "../game-progress/game-progress";
