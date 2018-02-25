@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {REMOVE_MISSION} from '../missions-actions';
+import {removeMission} from '../missions-actions';
 
 const ListMissions = ({missions, removeMission})=> {
   const toMissionListElement = mission =>  (
@@ -27,7 +27,7 @@ const ListMissions = ({missions, removeMission})=> {
 const mapStateToProps = ({missions})=> ({missions: missions});
 
 const mapDispatchToProps = (dispatch)=> ({
-  removeMission: mission => dispatch({type: REMOVE_MISSION, missionId: mission.id})
+  removeMission: mission => dispatch(removeMission(mission))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListMissions);
