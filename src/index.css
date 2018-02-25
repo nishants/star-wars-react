@@ -294,6 +294,46 @@ body {
 #missions-widget:not(.vehicle) .menu .select-vehicle {
   opacity: 0; }
 
+ul.planets > li.loader {
+  font-size: 20px;
+  border: 1px solid transparent !important; }
+ul.planets > li.assigned {
+  pointer-events: none; }
+  ul.planets > li.assigned > * {
+    opacity: 0.3; }
+
+ul.vehicles > li.none-left, ul.vehicles > li.no-range {
+  position: relative;
+  pointer-events: none; }
+  ul.vehicles > li.none-left .detail, ul.vehicles > li.no-range .detail {
+    text-decoration: line-through; }
+ul.vehicles > li:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  line-height: 46px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  content: " ";
+  pointer-events: none;
+  font-size: small;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease; }
+ul.vehicles > li.no-range:after, ul.vehicles > li.none-left:after {
+  opacity: 1; }
+ul.vehicles > li.none-left:after {
+  content: "none left"; }
+ul.vehicles > li.no-range:after {
+  content: "can not reach"; }
+
 #missions-selected > ul.missions {
   padding-top: 10px;
   background: rgba(0, 0, 0, 0.6); }

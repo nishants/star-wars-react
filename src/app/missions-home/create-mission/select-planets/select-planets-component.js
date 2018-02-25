@@ -9,7 +9,7 @@ const SelectPlanets = ({planets, onSelect})=> {
               <div className='fa fa-circle-o-notch fa-spin'> </div>
             </li>),
         toPlanetsListElement = (planet)=> (
-            <li onClick={()=>{onSelect(planet)}} key={planet.name}>
+            <li className={planet.assigned ? 'assigned' : ''} onClick={()=>{onSelect(planet)}} key={planet.name}>
               <div>
                 <img className='icon' alt={planet.name} src={'assets/' + planet.img}/>
                 <div className='detail'>

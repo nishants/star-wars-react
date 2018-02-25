@@ -1,10 +1,10 @@
-import {ADD_PLANET_TO_MISSION, REMOVE_PLANET_FROM_MISSION, PLANETS_FETCHED} from './planets-actions';
+import {ADDED_PLANET_TO_MISSION, REMOVE_PLANET_FROM_MISSION, PLANETS_FETCHED} from './planets-actions';
 import Planets from './planets-state';
 
 export default (state = Planets.initialState(), action) => {
   switch (action.type) {
-    case ADD_PLANET_TO_MISSION:
-      return Planets.addToMission(action.planetId);
+    case ADDED_PLANET_TO_MISSION:
+      return Planets.addToMission(state, action.planetName);
 
     case REMOVE_PLANET_FROM_MISSION:
       return Planets.removeFromMission(action.planetId);
