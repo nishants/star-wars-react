@@ -1,8 +1,11 @@
-import {GAME_WON, GAME_LOST, GAME_RESULT_LOADING} from './game-result-actions';
+import {GAME_WON, GAME_LOST, GAME_RESULT_LOADING, GAME_RESTARTED} from './game-result-actions';
 import GameResult from './game-result-state';
 
 export default (state = GameResult.initialState(), action)=> {
   switch(action.type){
+
+    case GAME_RESTARTED :
+      return GameResult.restart(state);
 
     case GAME_RESULT_LOADING :
       return GameResult.loadingResult(state);

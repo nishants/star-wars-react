@@ -5,6 +5,8 @@ export default {
     return state.filter((mission) => mission.id !== missionId);
   },
 
+  resetMissions : state => [],
+
   add: (state, planet, vehicle)=> {
     return state.concat({
       id: state.length,
