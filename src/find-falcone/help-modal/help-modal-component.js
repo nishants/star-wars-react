@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {CLOSE_HELP_MODAL} from './help-modal-actions';
+import {closeModal} from './help-modal-actions';
 
 const HelpModal = ({showModal, closeModal})=> {
     return (
@@ -22,7 +22,7 @@ const HelpModal = ({showModal, closeModal})=> {
 const mapStateToProps = ({helpModal})=> helpModal;
 
 const mapDispatchToProps = (dispatch)=> ({
-  closeModal: ()=> dispatch({type : CLOSE_HELP_MODAL})
+  closeModal: ()=> closeModal(dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HelpModal);
