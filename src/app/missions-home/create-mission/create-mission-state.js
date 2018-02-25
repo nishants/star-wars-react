@@ -9,7 +9,9 @@ export default {
     showMenu: (state)=> {
       return {
         ...state,
-        showMenu: true
+        showMenu: true,
+        selectedPlanet: null,
+        showVehicleMenu: false,
       }
     },
 

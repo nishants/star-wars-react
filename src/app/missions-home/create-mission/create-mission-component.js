@@ -25,6 +25,14 @@ const MissionsWidget = ({menu, openMenu, cancelCreatingMission, selectPlanet, se
             <label> 2. Select Vehicle</label>
             <SelectVehicles planet={menu.selectedPlanet} onSelect={(vehicle) => sendMission (menu.selectedPlanet, vehicle)}/>
           </div>
+          {
+            menu.selectedPlanet && (
+                <div className='selected-planet' onClick={openMenu}>
+                  <label>{menu.selectedPlanet.name}</label>
+                  <label className='fa fa-caret-down'></label>
+                </div>
+            )
+          }
         </div>
       </div>
   )
