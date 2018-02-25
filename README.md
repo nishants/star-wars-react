@@ -1,4 +1,5 @@
 # Todo
+- remove mission home and merge with missions-listing
 - test for help messages
 - set global headers for axios
 - show success/ failed messages
@@ -12,7 +13,7 @@
 - rename createMission to missoinswizard
 - no direct name for all actions
 
-# Importovements
+# Improvements
 - error handling for all requests
 - proptypes for all elements
 - travis ci
