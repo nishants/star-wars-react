@@ -17,5 +17,11 @@ export default {
       state.map((vehicle)=>
               vehicle.name === vehicleName ? {...vehicle, left: vehicle.left - 1} : vehicle
       )
+  ),
+
+  removedFromMission: (state, vehicleName)=> (
+      state.map((vehicle)=>
+              vehicle.name === vehicleName ? {...vehicle, left: vehicle.left + 1} : vehicle
+      )
   )
 }

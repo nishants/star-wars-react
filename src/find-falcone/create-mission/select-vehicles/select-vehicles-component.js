@@ -9,7 +9,7 @@ const SelectVehicle = ({vehicles, planet, onSelect})=> {
               <div className='fa fa-circle-o-notch fa-spin'> </div>
             </li>),
         toVehicleListElement = (vehicle)=> (
-            <li className={ (vehicle.left ? '' : 'none-left') + (vehicle.range < planet.distance ? 'no-range' : '')} onClick={()=>{onSelect(vehicle)}} key={vehicle.name}>
+            <li className={ (vehicle.left ? '' : 'none-left ') + (vehicle.range < planet.distance ? 'no-range' : '')} onClick={()=>{onSelect(vehicle)}} key={vehicle.name}>
               <div>
                 <img className='icon' alt={vehicle.name} src={'assets/' + vehicle.img}/>
                 <div className='detail'>

@@ -9,12 +9,12 @@ import CreateMissions from './create-mission/create-mission-component';
 import ListMissions   from './list-missions/list-missions-component';
 import GameProgress   from './game-progress/game-progress-component';
 
-import {loadPlanets}    from './planets/planets-actions';
-import {fetchVehicles, vehiclesFetched}  from './vehicles/vehicles-actions';
+import {loadPlanets}   from './planets/planets-actions';
+import {loadVehicles}  from './vehicles/vehicles-actions';
 
-const Game = ({loadPlanets, fetchVehicles})=> {
+const Game = ({loadPlanets, loadVehicles})=> {
   loadPlanets();
-  fetchVehicles();
+  loadVehicles();
   return (
       <div id='app'>
         <Background/>
@@ -32,12 +32,9 @@ const Game = ({loadPlanets, fetchVehicles})=> {
   );
 };
 
-const mapDispatchToProps = (dispatch)=> {
-  const onVehiclesFetched = data=> dispatch(vehiclesFetched(data));
-  return {
-    loadPlanets: ()=> loadPlanets(dispatch),
-    fetchVehicles: ()=> dispatch(fetchVehicles).then(onVehiclesFetched)
-  };
-};
+const mapDispatchToProps = (dispatch)=> ({
+  loadPlanets : ()=> loadPlanets(dispatch),
+  loadVehicles: ()=> loadVehicles(dispatch)
+});
 
 export default connect(null, mapDispatchToProps)(Game);

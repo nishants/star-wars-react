@@ -8,6 +8,7 @@
 - handle server error
 - deploy on a server
 - test planet removed from mission
+- removing vechicle from a mission
 
 # Importovements
 - error handling for all requests
