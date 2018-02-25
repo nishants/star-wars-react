@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {remote, remoteHeaders} from '../config';
+import {GAME_LOST, GAME_WON, GAME_RESULT_LOADING} from '../game-result/game-result-actions';
 
 export const ADD_MISSION = 'MISSIONS/ADD_MISSION';
 export const REMOVE_MISSION = 'MISSIONS/REMOVE_MISSION';
@@ -19,14 +20,14 @@ export const sendMissions = (missions, dispatch)=> {
     dispatch({type: SEND_MISSIONS});
     return findFlacone(missions, response.data.token).then((result)=> {
       const
-          ifWon = planetName => dispatch({type: MISSION_SUCCESS, planetName}),
-          ifLost = () => dispatch({type: MISSION_FAILED});
+          ifWon = planetName => dispatch({type: GAME_WON, planetName}),
+          ifLost = () => dispatch({type: GAME_LOST});
 
       return result.status === "success" ? ifWon(result.planet_name) : ifLost();
     });
   });
 
-  return dispatch({type: PREPARING_MISSIONS});
+  return dispatch({type: GAME_RESULT_LOADING});
 };
 
 export const findFlacone = (missions, token)=> {

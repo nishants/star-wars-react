@@ -6,6 +6,7 @@ export default {
     lost : false,
   }),
 
-  onSuccess: (state, planetName)=> ({...state, won: true, planetFound: planetName}),
-  onFailure: (state)=> ({...state}),
+  loadingResult: (state)=> ({...state, loading: true}),
+  onSuccess: (state, planetName)=> ({...state, won: true, planetFound: planetName, loading: false}),
+  onFailure: (state)=> ({...state, lost: true, loading: false}),
 }

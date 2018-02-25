@@ -11,22 +11,26 @@ const GameResult = ({gameResult})=> {
       gameResultState =  show + loading + won + lost;
 
   return (
-      <div id='game-result' className={gameResultState}>
-        <div className='lost message'>
-          <h1>You Loose !</h1>
-          <h3>Falcone was not found on any of the selected planet.</h3>
+      <div id='game-result' className={'modal-window ' + gameResultState}>
+        <div className='content title-text'>
+          <div className='lost message'>
+            <h1>You Loose !</h1>
+            <h3>Falcone was not found on any of the selected planet.</h3>
+          </div>
+          <div className='won message'>
+            <h1>You Won !</h1>
+            <h3>Falcone was found on {gameResult.planetFound}.</h3>
+          </div>
+          <div className='h1 loader'>
+            <span className='fa fa-circle-o-notch fa-spin'></span>
+          </div>
         </div>
-        <div className='lost message'>
-          <h1>You Won !</h1>
-          <h3>Falcone was found on {gameResult.planetFound}.</h3>
-        </div>
-
       </div>
   )
 };
 
 const mapStateToProps= ({gameResult})=> ({gameResult});
 
-const mapDispatchToProps= ()=> {};
+const mapDispatchToProps= ()=> ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameResult);
