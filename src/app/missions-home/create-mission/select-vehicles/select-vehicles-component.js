@@ -2,14 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 
-const SelectVehicle = ({vehicles, onSelect})=> {
+const SelectVehicle = ({vehicles, planet, onSelect})=> {
     const
         loaderElement = (
             <li className='loader'>
               <div className='fa fa-circle-o-notch fa-spin'> </div>
             </li>),
         toVehicleListElement = (vehicle)=> (
-            <li onClick={()=>{onSelect(vehicle)}} key={vehicle.name}>
+            <li className={ (vehicle.left ? '' : 'none-left') + (vehicle.range < planet.distance ? 'no-range' : '')} onClick={()=>{onSelect(vehicle)}} key={vehicle.name}>
               <div>
                 <img className='icon' alt={vehicle.name} src={'assets/' + vehicle.img}/>
                 <div className='detail'>
@@ -23,7 +23,7 @@ const SelectVehicle = ({vehicles, onSelect})=> {
   return(
       <ul className='vehicles'>
         {!vehicles.length && loaderElement}
-        {vehicles.map(toVehicleListElement)}
+        {planet && vehicles.map(toVehicleListElement)}
       </ul>
   );
 };

@@ -6,6 +6,7 @@ export default {
       name: vehicle.name,
       img: vehicle.img,
       left: vehicle.total_no,
+      speed: vehicle.speed,
       range: vehicle.max_distance}));
   },
 
