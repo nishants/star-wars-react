@@ -1,23 +1,21 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {closeModal} from './help-modal-actions';
+import template from './help-modal.pug';
 
-const HelpModal = ({showModal, closeModal})=> {
-    return (
-        <div id='help' className={'modal-window ' + (showModal ? "show" : "")}>
-          <div className='content'>
-            <div className='message'>
-              <ul className='title-text'>
-                <li>King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets - DonLon, Enchai, Jebing, Sapir, Lerbin & Pingasor.</li>
-                <li>However he has limited resources at his disposal & can send his army to only 4 of these planets.</li>
-                <li>Select planets and send missionaries to find Falcone.</li>
-              </ul>
-            </div>
-            <button className='skip' onClick={closeModal}>Continue</button>
-          </div>
-        </div>
-    );
-};
+class HelpModal extends React.Component{
+  render(){
+    const {
+        showModal,
+        closeModal
+        } = this.props;
+    return template.call(this, {
+      showModal,
+      closeModal
+    });
+
+  }
+}
 
 const mapStateToProps = ({helpModal})=> helpModal;
 
