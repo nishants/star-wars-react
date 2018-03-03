@@ -1,4 +1,5 @@
 # Todo
+- fetch token once during loading
 - remove mission home and merge with missions-listing
 - test for help messages
 - set global headers for axios
