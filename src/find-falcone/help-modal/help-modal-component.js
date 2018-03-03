@@ -3,19 +3,13 @@ import {connect} from 'react-redux';
 import {closeModal} from './help-modal-actions';
 import template from './help-modal.pug';
 
-class HelpModal extends React.Component{
-  render(){
-    const {
-        showModal,
-        closeModal
-        } = this.props;
-    return template.call(this, {
-      showModal,
-      closeModal
-    });
+const HelpModal  = ({showModal, closeModal})=> {
+  return template.call({}, {
+    showModal,
+    closeModal
+  });
+};
 
-  }
-}
 
 const mapStateToProps = ({helpModal})=> helpModal;
 
