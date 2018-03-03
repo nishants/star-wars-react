@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {CREATE_NEW_MISSION, CANCEL_CREATING_MISSION,} from '../create-mission-actions'
-import { sendMissions} from '../../missions-home/missions-actions'
+import { sendMissions} from '../../missions/missions-actions'
 import Help from '../create-mission-help';
 import {maxMissions} from '../../../config';
 

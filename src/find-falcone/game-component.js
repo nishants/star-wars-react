@@ -6,7 +6,7 @@ import HelpModal      from './help-modal/help-modal-component';
 import GameResult     from './game-result/game-result-component';
 import HelpButton     from './help-button/help-buttton-component';
 import CreateMissions from './create-mission/create-mission-component';
-import ListMissions   from './list-missions/list-missions-component';
+import ListMissions   from './missions/missions-component';
 import GameProgress   from './game-progress/game-progress-component';
 
 import {loadPlanets}   from './planets/planets-actions';

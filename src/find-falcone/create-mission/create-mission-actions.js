@@ -1,4 +1,4 @@
-import {createMission} from '../missions-home/missions-actions'
+import {createMission} from '../missions/missions-actions'
 import {assignPlanet}  from '../planets/planets-actions';
 import {assignVehicle} from '../vehicles/vehicles-actions';
 
