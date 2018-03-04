@@ -2,9 +2,27 @@
   color: white;
   text-align: center;
   margin: auto;
+
+  #help-button{
+    padding: $padding;
+    font-size: 30px;
+    $help_size: 55px;
+
+    > .fa {
+      color: $white_light;
+      text-align: center;
+    }
+  }
+  #mission-action{
+    width: 100%;
+    margin: $padding auto;
+    padding: 0px $padding;
+    max-width: $home_max_width;
+    > button{
+      width: 100%;
+      opacity: 0.95;
+    }
+  }
 }
 
-@import '../help-button/help-buttton';
-@import '../create-mission/create-missions';
 @import "missions";
-@import "../game-progress/game-progress";

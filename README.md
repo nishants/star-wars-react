@@ -1,3 +1,7 @@
+# Writup
+- state functions
+- jade for dump component, functions for higher order smart components
+
 # Todo
 - missions module
 - fetch token once during loading
