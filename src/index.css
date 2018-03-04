@@ -12,12 +12,12 @@ input {
   box-sizing: border-box;
   border: none; }
 
-.resize-container:after, .modal-window .content .bar:after, #missions-selected > ul.missions > li:after, #missions-widget .menu .sub-menu > ul > li > div:after {
+.resize-container:after, .modal-window .content .bar:after, #missions-selected > ul.missions > li:after, #missions-wizard .menu .sub-menu > ul > li > div:after {
   content: "";
   display: table;
   clear: both; }
 
-ul.undo-list, #missions-selected > ul.missions, #missions-widget .menu .sub-menu > ul {
+ul.undo-list, #missions-selected > ul.missions, #missions-wizard .menu .sub-menu > ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -52,7 +52,7 @@ body {
   #main-content .thumbnail {
     height: 50px;
     width: 50px; }
-  #main-content .title-text, #main-content button, #main-content #missions-selected > ul.missions > li, #main-content #missions-widget .menu, #missions-widget #main-content .menu {
+  #main-content .title-text, #main-content button, #main-content #missions-selected > ul.missions > li, #main-content #missions-wizard .menu, #missions-wizard #main-content .menu {
     font-family: "Aldrich", sans-serif; }
 
 #background {
@@ -242,7 +242,7 @@ body {
     color: rgba(255, 255, 255, 0.3);
     text-align: center; }
 
-#missions-widget {
+#missions-wizard {
   position: fixed;
   top: 56px;
   left: 0;
@@ -250,72 +250,72 @@ body {
   width: 100%;
   overflow: visible;
   height: 40px; }
-  #missions-widget .head-text, #missions-widget .menu .sub-menu > label {
+  #missions-wizard .head-text, #missions-wizard .menu .sub-menu > label {
     color: #3dc743;
     display: block;
     font-size: large;
     width: calc(100% - 2 * 10px);
     line-height: 40px;
     padding: 10px; }
-  #missions-widget .backdrop {
+  #missions-wizard .backdrop {
     position: fixed;
     top: 0px;
     left: 0px;
     height: 100vh;
     width: 100vw;
     background: rgba(0, 0, 0, 0.6); }
-  #missions-widget .actions, #missions-widget .menu {
+  #missions-wizard .actions, #missions-wizard .menu {
     max-width: 500px;
     margin: auto;
     overflow: hidden; }
-  #missions-widget .actions {
+  #missions-wizard .actions {
     height: 100%; }
-    #missions-widget .actions button {
+    #missions-wizard .actions button {
       display: block;
       width: 100%;
       -webkit-transition: transform 250ms ease;
       -moz-transition: transform 250ms ease;
       -o-transition: transform 250ms ease;
       transition: transform 250ms ease; }
-    #missions-widget .actions button.cancel {
+    #missions-wizard .actions button.cancel {
       background: rgba(0, 0, 0, 0.6);
       color: rgba(255, 255, 255, 0.3); }
-  #missions-widget .menu {
+  #missions-wizard .menu {
     position: relative;
     width: 100%;
     height: 480px;
     overflow: auto;
     border: 1px solid rgba(0, 255, 128, 0.3);
     background-color: black; }
-    #missions-widget .menu .sub-menu {
+    #missions-wizard .menu .sub-menu {
       width: 100%;
       -webkit-transition: all 250ms ease;
       -moz-transition: all 250ms ease;
       -o-transition: all 250ms ease;
       transition: all 250ms ease; }
-      #missions-widget .menu .sub-menu > ul > li {
+      #missions-wizard .menu .sub-menu > ul > li {
         cursor: pointer;
         position: relative;
         padding: 20px;
         color: #00FF80;
         border-top: 1px solid rgba(0, 255, 128, 0.3); }
-        #missions-widget .menu .sub-menu > ul > li > div {
+        #missions-wizard .menu .sub-menu > ul > li > div {
           display: block;
           width: 350px;
           margin: auto; }
-        #missions-widget .menu .sub-menu > ul > li img {
+        #missions-wizard .menu .sub-menu > ul > li img {
           height: 25px;
           width: 25px;
           float: left; }
-        #missions-widget .menu .sub-menu > ul > li .detail {
+        #missions-wizard .menu .sub-menu > ul > li .detail {
           padding-left: 10px;
           text-align: left;
           float: left;
           line-height: 25px; }
-    #missions-widget .menu .select-planet {
+    #missions-wizard .menu .select-planet {
       position: relative;
       z-index: 1; }
-    #missions-widget .menu .selected-planet {
+    #missions-wizard .menu .selected-planet {
       position: absolute;
       top: 0;
       width: 100%;
@@ -325,56 +325,56 @@ body {
       background-color: rgba(0, 0, 0, 0.9);
       border: 1px solid transparent;
       padding: 10px; }
-    #missions-widget .menu .select-vehicle {
+    #missions-wizard .menu .select-vehicle {
       position: absolute;
       top: 40px; }
 
-.disabled-button, #missions-widget.create .actions button.create, #missions-widget:not(.create) .actions button.cancel {
+.disabled-button, #missions-wizard.create .actions button.create, #missions-wizard:not(.create) .actions button.cancel {
   pointer-events: none; }
 
-#missions-widget.create .actions button.create {
+#missions-wizard.create .actions button.create {
   -webkit-transform: translateY(-40px);
   -moz-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   -o-transform: translateY(-40px);
   transform: translateY(-40px); }
-#missions-widget.create .actions button.cancel {
+#missions-wizard.create .actions button.cancel {
   -webkit-transform: translateY(-40px);
   -moz-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   -o-transform: translateY(-40px);
   transform: translateY(-40px); }
 
-#missions-widget:not(.create) .backdrop {
+#missions-wizard:not(.create) .backdrop {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0); }
-#missions-widget:not(.create) .menu {
+#missions-wizard:not(.create) .menu {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0); }
-  #missions-widget:not(.create) .menu .select-planet {
+  #missions-wizard:not(.create) .menu .select-planet {
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     transform: translateY(-100%); }
 
-#missions-widget.vehicle .menu .select-planet {
+#missions-wizard.vehicle .menu .select-planet {
   opacity: 0;
   pointer-events: none; }
 
-#missions-widget:not(.vehicle) .menu .selected-planet {
+#missions-wizard:not(.vehicle) .menu .selected-planet {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0); }
-#missions-widget:not(.vehicle) .menu .select-vehicle {
+#missions-wizard:not(.vehicle) .menu .select-vehicle {
   opacity: 0; }
 
 ul.planets > li.loader {

@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {CREATE_NEW_MISSION, CANCEL_CREATING_MISSION,} from '../create-mission-actions'
+import {CREATE_NEW_MISSION, CANCEL_CREATING_MISSION,} from '../mission-wizard-actions'
 import { sendMissions} from '../../missions/missions-actions'
-import Help from '../create-mission-help';
+import Help from '../mission-wizard-help';
 import {maxMissions} from '../../../config';
 
 const WizardButton = ({

@@ -2,7 +2,7 @@
   pointer-events: none;
 }
 
-#missions-widget.create{
+#missions-wizard.create{
   .actions{
     button.create{
       @extend .disabled-button;
@@ -14,7 +14,7 @@
   }
 }
 
-#missions-widget:not(.create){
+#missions-wizard:not(.create){
   .backdrop{
     @include transform(scale(0));
   }

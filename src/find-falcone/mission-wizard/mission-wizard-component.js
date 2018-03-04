@@ -5,9 +5,9 @@ import SelectPlanets  from './select-planets/select-planets-component';
 import SelectVehicles from './select-vehicles/select-vehicles-component';
 import WizardButton   from './wizard-button/wizard-button-component';
 
-import {sendMission, createNewMission, cancelCreatingMission, selectPlanet} from './create-mission-actions'
+import {sendMission, createNewMission, cancelCreatingMission, selectPlanet} from './mission-wizard-actions'
 
-const MissionsWidget = ({
+const MissionsWizard = ({
     wizardStep,
     selectedPlanet,
     openMenu,
@@ -15,7 +15,7 @@ const MissionsWidget = ({
     selectPlanet,
     sendMission})=> (
 
-    <div id='missions-widget' className={wizardStep}>
+    <div id='missions-wizard' className={wizardStep}>
       <div className='backdrop' onClick={cancelCreatingMission}></div>
       <WizardButton/>
       <div className='menu'>
@@ -47,4 +47,4 @@ const mapDispatchToProps = (dispatch)=> ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MissionsWidget);
+export default connect(mapStateToProps, mapDispatchToProps)(MissionsWizard);

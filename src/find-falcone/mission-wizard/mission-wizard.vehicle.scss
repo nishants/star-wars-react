@@ -1,4 +1,4 @@
-#missions-widget.vehicle{
+#missions-wizard.vehicle{
   .menu{
     .select-planet{
       opacity : 0;
@@ -7,7 +7,7 @@
   }
 }
 
-#missions-widget:not(.vehicle){
+#missions-wizard:not(.vehicle){
   .menu{
     .selected-planet{
       @include transform(scale(0));
