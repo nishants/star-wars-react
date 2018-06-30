@@ -17,5 +17,5 @@ export const sendMission = (dispatch, planet, vehicle)=> {
   dispatch(assignPlanet(planet));
   dispatch(assignVehicle(vehicle));
   dispatch(createMission(planet, vehicle));
-  dispatch(cancelCreatingMission);
+  dispatch(cancelCreatingMission());
 };
