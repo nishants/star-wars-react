@@ -7,6 +7,8 @@ import {createStore, applyMiddleware} from 'redux';
 import rootReducer from './reducers';
 import thunk from 'redux-thunk';
 
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
 
@@ -15,12 +17,14 @@ import 'font-awesome/css/font-awesome.css';
 
 const sagaMiddleware = createSagaMiddleware();
 
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware), applyMiddleware(thunk)));
+sagaMiddleware.run(rootSaga);
+
 ReactDOM.render(
-    <Provider store={createStore(rootReducer, applyMiddleware(thunk), applyMiddleware(sagaMiddleware))}>
+    <Provider store={store}>
       <Game/>
     </Provider>,
     document.getElementById('root'));
 
-sagaMiddleware.run(rootSaga);
 document.title = 'Star Wars';
 registerServiceWorker();

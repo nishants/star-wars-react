@@ -1,3 +1,8 @@
+# Todo
+- replace thunk with saga
+- add css modules
+- create custom webpack 
+
 # Writup
 - state functions
 - jade for dump component, functions for higher order smart components
