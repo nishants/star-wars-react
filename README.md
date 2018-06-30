@@ -2,7 +2,9 @@
 - replace thunk with saga
 - add css modules
 - create custom webpack
-- remove data load in redner of game-component 
+- remove data load in render of game-component
+- add prop types
+- add lint 
 
 # Writup
 - state functions
@@ -14,9 +16,7 @@
 - remove mission home and merge with missions-listing
 - test for help messages
 - set global headers for axios
-- show success/ failed messages
 - add lint
-- set window title
 - document state functions
 - handle server error
 - deploy on a server
