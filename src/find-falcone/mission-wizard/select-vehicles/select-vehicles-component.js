@@ -8,7 +8,7 @@ const SelectVehicle = ({vehicles, planet, onSelect})=> {
         toVehicleListElement = (vehicle)=> (
             <li className={ (vehicle.left ? '' : 'none-left ') + (vehicle.range < planet.distance ? 'no-range' : '')} onClick={()=>{onSelect(vehicle)}} key={vehicle.name}>
               <div>
-                <img className='icon' alt={vehicle.name} src={'assets/' + vehicle.img}/>
+                <img className='icon' alt={vehicle.name} src={vehicle.img}/>
                 <div className='detail'>
                   <span className='name'>{vehicle.name} &nbsp;</span>
                   <span className='caption'>{vehicle.speed} Megamiles per day, {vehicle.left} left</span>
