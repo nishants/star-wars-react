@@ -1,4 +1,4 @@
-import {ADDED_PLANET_TO_MISSION, REMOVED_PLANET_FROM_MISSION, PLANETS_LOADED} from './planets-actions';
+import {PLANET_ACTIONS, ADDED_PLANET_TO_MISSION, REMOVED_PLANET_FROM_MISSION} from './planets-actions';
 import Planets from './planets-state';
 import {GAME_RESTARTED} from '../game-actions';
 
@@ -7,8 +7,8 @@ export default (state = Planets.initialState(), action) => {
 
   switch (action.type) {
 
-    case PLANETS_LOADED:
-      return Planets.setPlanets(state, action.planets) ;
+    case PLANET_ACTIONS.LOADED:
+      return Planets.setPlanets(state, action.payload) ;
 
     case GAME_RESTARTED:
       return Planets.resetPlanets(state);

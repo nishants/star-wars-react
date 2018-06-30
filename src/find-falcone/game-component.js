@@ -33,7 +33,7 @@ const Game = ({loadPlanets, loadVehicles})=> {
 };
 
 const mapDispatchToProps = (dispatch)=> ({
-  loadPlanets : ()=> loadPlanets(dispatch),
+  loadPlanets : ()=> dispatch(loadPlanets()),
   loadVehicles: ()=> loadVehicles(dispatch)
 });
 
