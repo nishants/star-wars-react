@@ -15,6 +15,13 @@ export const vehiclesLoaded = (data)=> ({
     payload: data
 });
 
-export const assignVehicle = vehicle => ({type: ADDED_VEHICLE_TO_MISSION, vehicleName: vehicle.name});
-export const unAssignVehicle = vehicle => ({type: REMOVED_VEHICLE_TO_MISSION, vehicleName: vehicle.name});
+export const assignVehicle = vehicle => ({
+    type: ADDED_VEHICLE_TO_MISSION,
+    vehicleName: vehicle.name
+});
+
+export const unAssignVehicle = vehicle => ({
+    type: REMOVED_VEHICLE_TO_MISSION,
+    vehicleName: vehicle.name
+});
 

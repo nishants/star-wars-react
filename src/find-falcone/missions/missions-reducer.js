@@ -1,5 +1,5 @@
 import Missions from './missions-state';
-import {REMOVE_MISSION, ADD_MISSION} from './missions-actions';
+import {MISSIONS_ACTIONS} from './missions-actions';
 import {GAME_RESTARTED} from '../game-actions';
 
 export default (state = Missions.initialState(), action)=> {
@@ -8,10 +8,10 @@ export default (state = Missions.initialState(), action)=> {
     case GAME_RESTARTED:
       return Missions.resetMissions(state);
 
-    case ADD_MISSION:
+    case MISSIONS_ACTIONS.ADD_MISSION:
       return Missions.add(state, action.planet, action.vehicle);
 
-    case REMOVE_MISSION:
+    case MISSIONS_ACTIONS.REMOVE_MISSION:
       return Missions.remove(state, action.missionId);
 
     default :

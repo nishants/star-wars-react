@@ -5,9 +5,21 @@ export const PLANET_ACTIONS = {
     LOADED : 'PLANETS/PLANETS_LOADED'
 };
 
-export const loadPlanets = ()=> ({type: PLANET_ACTIONS.LOAD});
-export const savePlanets = (planets)=> ({type: PLANET_ACTIONS.LOADED, payload: planets});
+export const loadPlanets = ()=> ({
+    type: PLANET_ACTIONS.LOAD
+});
 
-export const assignPlanet = planet => ({type: ADDED_PLANET_TO_MISSION, planetName: planet.name});
+export const savePlanets = (planets)=> ({
+    type: PLANET_ACTIONS.LOADED,
+    payload: planets
+});
 
-export const unAssignPlanet = planet => ({type: REMOVED_PLANET_FROM_MISSION, planetName: planet.name});
+export const assignPlanet = planet => ({
+    type: ADDED_PLANET_TO_MISSION,
+    planetName: planet.name
+});
+
+export const unAssignPlanet = planet => ({
+    type: REMOVED_PLANET_FROM_MISSION,
+    planetName: planet.name
+});

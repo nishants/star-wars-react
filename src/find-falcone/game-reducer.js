@@ -11,7 +11,7 @@ export default (state = GameResult.initialState(), action)=> {
       return GameResult.loadingResult(state);
 
     case GAME_WON :
-      return GameResult.onSuccess(state, action.planetName);
+      return GameResult.onSuccess(state, action.payload);
 
     case GAME_LOST :
       return GameResult.onFailure(state);

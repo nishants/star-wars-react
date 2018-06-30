@@ -32,7 +32,7 @@ const mapStateToProps = ({createMission, missions})=> ({
 const mapDispatchToProps = (dispatch)=> ({
   openMenu: ()=> dispatch({type: CREATE_NEW_MISSION}),
   cancelCreatingMission: ()=> dispatch({type: CANCEL_CREATING_MISSION}),
-  dispatchMissions: missions=>  sendMissions(missions, dispatch)
+  dispatchMissions: missions=>  dispatch(sendMissions(missions))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(WizardButton);
