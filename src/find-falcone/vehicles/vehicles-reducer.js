@@ -1,4 +1,4 @@
-import {VEHICLES_LOADED, ADDED_VEHICLE_TO_MISSION, REMOVED_VEHICLE_TO_MISSION} from './vehicles-actions';
+import {VEHICLES_ACTIONS, VEHICLES_LOADED, ADDED_VEHICLE_TO_MISSION, REMOVED_VEHICLE_TO_MISSION} from './vehicles-actions';
 import Vehicles from './vehicles-state';
 import {GAME_RESTARTED} from '../game-actions';
 
@@ -6,8 +6,8 @@ export default (state = Vehicles.initialState(), action) => {
 
   switch (action.type) {
 
-    case VEHICLES_LOADED:
-      return Vehicles.setVehicles(state, action.vehicles);
+    case VEHICLES_ACTIONS.VEHICLES_LOADED:
+      return Vehicles.setVehicles(state, action.payload);
 
     case GAME_RESTARTED:
       return Vehicles.reset(state, action.vehicles);

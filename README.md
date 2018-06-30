@@ -1,7 +1,8 @@
 # Todo
 - replace thunk with saga
 - add css modules
-- create custom webpack 
+- create custom webpack
+- remove data load in redner of game-component 
 
 # Writup
 - state functions

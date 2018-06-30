@@ -34,7 +34,7 @@ const Game = ({loadPlanets, loadVehicles})=> {
 
 const mapDispatchToProps = (dispatch)=> ({
   loadPlanets : ()=> dispatch(loadPlanets()),
-  loadVehicles: ()=> loadVehicles(dispatch)
+  loadVehicles: ()=> dispatch(loadVehicles())
 });
 
 export default connect(null, mapDispatchToProps)(Game);
